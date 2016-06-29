@@ -212,7 +212,7 @@ public class Main extends PluginBase implements Listener
     if(isWhitelisted == true)
     {
 
-      if(this.in_array(player.getName(), wPlayers))
+      if(!(this.in_array(player.getName(), wPlayers)))
       {
 
         player.kick(reason, false);
