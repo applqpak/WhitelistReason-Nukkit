@@ -55,6 +55,8 @@ public class Main extends PluginBase implements Listener
 
       saveResource("config.yml");
 
+      this.config = getConfig();
+
     }
 
     this.getServer().getPluginManager().registerEvents(this, this);
@@ -73,11 +75,55 @@ public class Main extends PluginBase implements Listener
 
       case "whitelistreason":
 
+        if(args.length == 0)
+        {
+
+          sender.sendMessage(TextFormat.RED + "Invalid usage. Usage: " + this.USAGE);
+
+        }
+        else
+        {
+
+          if(args[0].equalsIgnoreCase("version"))
+          {
+
+            sender.sendMessage(TextFormat.YELLOW + "-- WhitelistReason version --");
+
+            sender.sendMessage(TextFormat.GREEN + this.VERSION);
+
+          }
+          else if(args[0].equalsIgnoreCase("add"))
+          {
+
+            if(args.length == 1)
+            {
+
+              sender.sendMessage(TextFormat.RED + "Invalid usage. Usage: " + this.USAGE);
+
+            }
+            else
+            {
+
+            }
+
+          }
+
+        }
+
       break;
 
     }
 
     return true;
+
+  }
+
+  @EventHandler
+
+  public void onPreLogin(PlayerPreLoginEvent event)
+  {
+
+    Player player = event.getPlayer();
 
   }
 
