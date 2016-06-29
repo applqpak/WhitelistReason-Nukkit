@@ -136,6 +136,50 @@ public class Main extends PluginBase implements Listener
             else
             {
 
+              String name = args[1];
+
+              List players = this.config.getList("users");
+
+              String[] wPlayers = players.toArray(new String[players.size()]);
+
+              if(this.in_array(name, wPlayers))
+              {
+
+                sender.sendMessage(TextFormat.RED + name + " is already whitelisted.");
+
+              }
+              else
+              {
+
+                //need help here
+
+              }
+
+            }
+
+          }
+          else if(args[0].equalsIgnoreCase("set"))
+          {
+
+            if(args.length == 1)
+            {
+
+              sender.sendMessage(TextFormat.RED + "Invalid usage. Usage: " + this.USAGE);
+
+            }
+            else
+            {
+
+              args[0] = "";
+
+              String message = this.implode(" ", args);
+
+              this.config.set("message", message);
+
+              this.config.save();
+
+              sender.sendMessage(TextFormat.GREEN + "Successfully set the whitelist reason!");
+
             }
 
           }
