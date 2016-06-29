@@ -138,7 +138,7 @@ public class Main extends PluginBase implements Listener
 
               String name = args[1];
 
-              List players = this.config.getList("users");
+              List players = this.config.getList("players");
 
               String[] wPlayers = players.toArray(new String[players.size()]);
 
