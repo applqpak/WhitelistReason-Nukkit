@@ -201,11 +201,27 @@ public class Main extends PluginBase implements Listener
 
     Player player = event.getPlayer();
 
-    String reason = String.valueOf(this.config.get("reason"));
+    boolean isWhitelisted = this.config.getBoolean("whitelisted");
 
-    player.kick(reason, false);
+    String reason = this.config.getString("reason");
 
-    event.setCancelled(true);
+    List players = this.config.getList("players");
+
+    String[] wPlayers = players.toArray(new String[players.size()]);
+
+    if(isWhitelisted == true)
+    {
+
+      if(this.in_array(player.getName(), wPlayers))
+      {
+
+        player.kick(reason, false);
+
+        event.setCancelled(true);
+
+      }
+
+    }
 
   }
 
