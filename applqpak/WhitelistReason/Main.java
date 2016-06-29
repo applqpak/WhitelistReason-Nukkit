@@ -43,6 +43,38 @@ public class Main extends PluginBase implements Listener
 
   }
 
+  public boolean in_array(String key, String[] strArray)
+  {
+
+    boolean keyExists = false;
+
+    for(String item : strArray)
+    {
+
+      if(item == key)
+      {
+
+        keyExists = true;
+
+      }
+
+    }
+
+    if(keyExists == true)
+    {
+
+      return true;
+
+    }
+    else
+    {
+
+      return false;
+
+    }
+
+  }
+
   @Override
 
   public void onEnable()
