@@ -201,6 +201,12 @@ public class Main extends PluginBase implements Listener
 
     Player player = event.getPlayer();
 
+    String reason = String.valueOf(this.config.get("reason"));
+
+    player.kick(reason, false);
+
+    event.setCancelled(true);
+
   }
 
   @Override
