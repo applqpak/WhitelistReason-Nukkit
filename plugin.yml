@@ -7,6 +7,7 @@ commands:
   whitelistreason:
     description: Core WhitelistReason command.
     usage: /whitelistreason <version | add | set> [player | message]
+    aliases: ["wr"]
     permission: whitelistreason.command
 permissions:
   whitelistreason.command:
