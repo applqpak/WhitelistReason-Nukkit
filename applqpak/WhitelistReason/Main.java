@@ -202,7 +202,7 @@ public class Main extends PluginBase implements Listener
 
               String message = this.implode(" ", args);
 
-              this.config.set("message", message);
+              this.config.set("reason", message);
 
               this.config.save();
 
