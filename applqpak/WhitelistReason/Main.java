@@ -211,7 +211,7 @@ public class Main extends PluginBase implements Listener
             }
 
           }
-          else if(args[0].equalsIgnoreCase("enable")
+          else if(args[0].equalsIgnoreCase("enable"))
           {
 
             this.config.set("whitelisted", true);
@@ -221,7 +221,7 @@ public class Main extends PluginBase implements Listener
             sender.sendMessage(TextFormat.GREEN + "Successfully enabled the whitelist!");
 
           }
-          else if(args[0].equalsIgnoreCase("disable")
+          else if(args[0].equalsIgnoreCase("disable"))
           {
 
             this.config.set("whitelisted", false);
