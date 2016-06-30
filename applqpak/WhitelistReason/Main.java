@@ -159,7 +159,7 @@ public class Main extends PluginBase implements Listener
 
                 this.config.save();
 
-                ended.sendMessage(TextFormat.GREEN + "Successfully added " + name + " to the whitelist!");
+                sender.sendMessage(TextFormat.GREEN + "Successfully added " + name + " to the whitelist!");
 r
               }
 
