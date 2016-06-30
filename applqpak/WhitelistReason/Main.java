@@ -78,7 +78,7 @@ public class Main extends PluginBase implements Listener
   public String[] toS(List lst)
   {
 
-    String[] strArray = String[lst.size()];
+    String[] strArray = new String[lst.size()];
 
     int index = 0;
 
