@@ -151,7 +151,7 @@ public class Main extends PluginBase implements Listener
               else
               {
 
-                String[] p = Arrays.copyOf(wPlayers, wPlayer.length + 1);
+                String[] p = Arrays.copyOf(wPlayers, wPlayers.length + 1);
 
                 p[p.length] = name;
 
