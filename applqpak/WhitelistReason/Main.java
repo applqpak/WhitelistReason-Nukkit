@@ -10,7 +10,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.Command;
 import cn.nukkit.Player;
 
-import java.util.List;
+import java.util.*;
 import java.io.File;
 
 public class Main extends PluginBase implements Listener
@@ -151,8 +151,16 @@ public class Main extends PluginBase implements Listener
               else
               {
 
-                //need help here
+                String[] p = Arrays.copyOf(wPlayers, wPlayer.length + 1);
 
+                p[p.length] = name;
+
+                this.config.set("players", p);
+
+                this.config.save();
+
+                ended.sendMessage(TextFormat.GREEN + "Successfully added " + name + " to the whitelist!");
+r
               }
 
             }
