@@ -107,9 +107,9 @@ public class Main extends PluginBase implements Listener
 
       saveResource("config.yml");
 
-      this.config = getConfig();
-
     }
+
+    this.config = getConfig();
 
     this.getServer().getPluginManager().registerEvents(this, this);
 
