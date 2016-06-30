@@ -20,7 +20,7 @@ public class Main extends PluginBase implements Listener
 
   public String VERSION = "v1.0.0";
 
-  public String USAGE = "/whitelistreason <version | add | set> [player | message]";
+  public String USAGE = "/whitelistreason <version | add | set | enable | disable> [player | message]";
 
   public String implode(String glue, String[] strArray)
   {
@@ -173,7 +173,7 @@ public class Main extends PluginBase implements Listener
 
                 String[] p = Arrays.copyOf(wPlayers, wPlayers.length + 1);
 
-                p[p.length] = name;
+                p[p.length - 1] = name;
 
                 this.config.set("players", p);
 
@@ -209,6 +209,26 @@ public class Main extends PluginBase implements Listener
               sender.sendMessage(TextFormat.GREEN + "Successfully set the whitelist reason!");
 
             }
+
+          }
+          else if(args[0].equalsIgnoreCase("enable")
+          {
+
+            this.config.set("whitelisted", true);
+
+            this.config.save();
+
+            sender.sendMessage(TextFormat.GREEN + "Successfully enabled the whitelist!");
+
+          }
+          else if(args[0].equalsIgnoreCase("disable")
+          {
+
+            this.config.set("whitelisted", false);
+
+            this.config.save();
+
+            sender.sendMessage(TextFormat.GREEN + "Siccessfully disabled the whitelist!");
 
           }
 
