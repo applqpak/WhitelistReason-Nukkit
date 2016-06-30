@@ -6,7 +6,7 @@ main: applqpak.WhitelistReason.Main
 commands:
   whitelistreason:
     description: Core WhitelistReason command.
-    usage: /whitelistreason <version | add | set> [player | message]
+    usage: /whitelistreason <version | add | set | enable | disable> [player | message]
     aliases: ["wr"]
     permission: whitelistreason.command
 permissions:
