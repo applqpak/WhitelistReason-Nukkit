@@ -75,6 +75,26 @@ public class Main extends PluginBase implements Listener
 
   }
 
+  public String[] toS(List lst)
+  {
+
+    String[] strArray = String[lst.size()];
+
+    int index = 0;
+
+    for(Object value : lst)
+    {
+
+      strArray[index] = String.valueOf(value);
+
+      index++;
+
+    }
+
+    return strArray;
+
+  }
+
   @Override
 
   public void onEnable()
@@ -140,7 +160,7 @@ public class Main extends PluginBase implements Listener
 
               List players = this.config.getList("players");
 
-              String[] wPlayers = players.toArray(new String[players.size()]);
+              String[] wPlayers = this.toS(players);
 
               if(this.in_array(name, wPlayers))
               {
@@ -215,7 +235,7 @@ public class Main extends PluginBase implements Listener
 
     List players = this.config.getList("players");
 
-    String[] wPlayers = players.toArray(new String[players.size()]);
+    String[] wPlayers = this.toS(players);
 
     if(isWhitelisted == true)
     {
