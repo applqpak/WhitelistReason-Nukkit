@@ -228,7 +228,7 @@ public class Main extends PluginBase implements Listener
 
             this.config.save();
 
-            sender.sendMessage(TextFormat.GREEN + "Siccessfully disabled the whitelist!");
+            sender.sendMessage(TextFormat.GREEN + "Successfully disabled the whitelist!");
 
           }
 
